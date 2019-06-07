@@ -10,8 +10,8 @@ DB = MongoDB(connection_string=string, flag_ssl=True)
 
 @app.route('/')
 def index():
-    data = {'Hello BD': 'PriceCompareBot'}
-    DB.add_line_to_end(dbs='PriceCompareBot', collection='PriceCompareBot', value=data)
+    document = {'Hello BD': 'PriceCompareBot'}
+    DB.add_line_to_end(dbs='PriceCompareBot', collection='PriceCompareBot', value=document)
     return '@@@@@@@@@@@@@@ Hello Web PriceCompareBot @@@@@@@@@@@@@@'
 
 
