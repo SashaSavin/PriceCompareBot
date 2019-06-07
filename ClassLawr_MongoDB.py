@@ -5,8 +5,8 @@ import ssl
 # Класс для работы с БД "MongoDB"
 class MongoDB:
     # Инициализаци/открытие БД
-    def __init__(self, connection_string, ssl):
-        if ssl:
+    def __init__(self, connection_string, flag_ssl):
+        if flag_ssl:
             self.CLIENT = pymongo.MongoClient(connection_string, ssl=True, ssl_cert_reqs=ssl.CERT_NONE)
         else:
             self.CLIENT = pymongo.MongoClient(connection_string)

@@ -5,7 +5,7 @@ from ClassLawr_BotWebhook import BotWebhook
 print('@@@@@@@@@@@@@@ Hello Console PriceCompareBot @@@@@@@@@@@@@@')
 app = Flask(__name__)
 string = "mongodb+srv://Admin:HIUI#H*H89@pricecomparebot-mhmiv.mongodb.net/test?retryWrites=true&w=majority"
-DB = MongoDB(connection_string=string, ssl=True)
+DB = MongoDB(connection_string=string, flag_ssl=True)
 
 
 @app.route('/')
