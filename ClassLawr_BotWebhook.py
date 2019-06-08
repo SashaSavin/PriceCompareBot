@@ -55,7 +55,7 @@ class BotWebhook:
         return MESSAGE_INCOMING
 
     # ОТПРАВЛЯТЬ Сообщения
-    def send_message(self, chat_id, text, methods="POST", parse_mode=None):
+    def send_message(self, chat_id, text, methods="GET", parse_mode=None):
         MESSAGE_SENT = None
         if methods == "POST":
             MESSAGE_SENT = {'chat_id': chat_id, 'text': text, 'parse_mode': parse_mode}
