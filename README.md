@@ -1,5 +1,5 @@
 # PriceCompareBot
-
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 # ИНФОРМАЦИЯ
 **HEROKU:**
 - Название приложения: price-compare-bot
@@ -15,8 +15,14 @@
 - https://github.com/Igor546/PriceCompareBot/ <br>
 
 # ЗАПУСК ПРИЛОЖЕНИЯ
-- start_heroku.py - Для запуска на Heroku <br>
-- start_pycharm.py - Для запуска в PyCharm <br>
+- **start_heroku.py** - Для запуска на Heroku
+*Ничего не нужно, все уже работает и настроенно.* 
+Logs: "heroku logs --tail --app price-compare-bot"
+Deploy/Restart: Automatic deploys from  master
+- **start_pycharm.py** - Для запуска в PyCharm
+*Для работы бота нужен запуск Flask, с нормальным веб адрессом, поэтому рекомендую использовать тунель Ngrock.*
+
+> Следует учитывать что призапуске из PyCharm, Heroku не останавливается и все взаимодействия будут в двух потоках. При debug чтобы не поломать БД и TG Bot просите отключить сервер, или проводите все тесты на тестовой своей БД и Token Bot.
 
 
 # ЗАМЕТКИ
