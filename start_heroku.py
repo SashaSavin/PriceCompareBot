@@ -15,8 +15,7 @@ print('@@@@@@@@@@@@@@ Hello Console PriceCompareBot @@@@@@@@@@@@@@')
 @app.route('/')
 def index():
     string = "mongodb+srv://Admin:HIUI#H*H89@pricecomparebot-mhmiv.mongodb.net/test?retryWrites=true&w=majority"
-    DB = pymongo.MongoClient(string)
+    DB = MongoDB(connection_string=string, flag_ssl=True)
     document = {'Hello BD': 'PriceCompareBot'}
-    coll = DB.CLIENT['PriceCompareBot']['PriceCompareBot']
-    coll.save(document)
+    DB.add_line_to_end(dbs='PriceCompareBot', collection='PriceCompareBot', value=document)
     return '@@@@@@@@@@@@@@ Hello Web PriceCompareBot @@@@@@@@@@@@@@'
