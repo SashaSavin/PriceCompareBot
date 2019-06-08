@@ -1,5 +1,4 @@
 from flask import Flask
-# import pymongo
 from ClassLawr_MongoDB import MongoDB
 from ClassLawr_BotWebhook import BotWebhook
 
